@@ -99,7 +99,19 @@ void find_id(NV ds[])
         }
 }
 
-
+void find_name(NV ds[])
+{
+    char name[100];
+    printf("\nenter name: ");fflush(stdin);
+    fgets(name, sizeof(name), stdin);remove_newline(name);
+    for(int i = 0; i<201 ; i++)
+        {
+            if(strcmp(ds[i].last_name, name) == 0)
+                {
+                    printf("%s-%s-%s-%s-%s-%s-%s\n",ds[i].id,ds[i].first_name,ds[i].last_name,ds[i].sex,ds[i].day_birth,ds[i].value,ds[i].country);
+                }
+        }
+}
 
 int main()
 {
